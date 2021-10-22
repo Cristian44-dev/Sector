@@ -1,0 +1,96 @@
+.tarjeta {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 8rem 10%;
+    margin-bottom: 12rem;
+
+    &:hover .tarjeta__content {
+        & > span {
+            font-size: 13rem;
+        }
+
+        h2::after {
+            width: 20rem;
+        }
+    }
+}
+
+.tarjeta__content {
+    position: relative;
+    width: 45%;
+    flex-grow: 1;
+
+    & > span {
+        position: absolute;
+        top: -8.5rem;
+        left: -1rem;
+        font-size: 12rem;
+        font-weight: var(--font-bold);
+        color: var(--color-grey);
+        transition: all 0.5s ease;
+    }
+
+    h2 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: white;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -5rem;
+            left: 0;
+            width: 5rem;
+            height: 0.2rem;
+            background-color: var(--color-accent);
+            transition: all 0.5s ease;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: white;
+    }
+
+    a {
+        font-size: 1.4rem;
+        font-weight: var(--font-medium);
+        color: var(--color-accent);
+
+        span {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        span:not(:hover) {
+            transform: rotate(0deg);
+        }
+
+        &:hover span {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.tarjeta__img {
+    width: 45%;
+    min-width: 27rem;
+    flex-grow: 1;
+    img {
+        width: 100%;
+    }
+}
+
+main section:nth-child(even) .tarjeta {
+    flex-direction: row-reverse;
+}
+
+main section {
+    position: relative;
+    top: -10rem;
+}

@@ -1,0 +1,7 @@
+@import "./css/base/_variables.css";
+@import "./css/base/_normalize.css";
+@import "./css/layout/_header.css";
+@import "./css/layout/_main.css";
+@import "./css/layout/_tarjeta.css";
+@import "./css/layout/_footer.css";
+@import "./css/layout/_barra.css";
