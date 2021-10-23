@@ -22,18 +22,30 @@
     flex-direction: column;
     align-items: center;
 
+
     li {
-        display: inline;
-        margin: 0 2rem;
+        position:relative;
+        display: inline-block;
+        margin: 0 1.5rem;
         font-weight: var(--font-bold);
         font-size: 1.5rem;
+    
+        a::after{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            bottom:-0.5rem;
+            left: 0;
+            height: 0.2rem;
+            width:0;
+            background-color: var(--color-bg);
+            transition: all .3s ease;
+        }
+
     }
 
-    li > a {
-        transition: all 0.3s ease;
-    }
-    li > a:hover {
-        color: var(--color-accent);
+    li:hover a::after{
+        width: 100%;
     }
 
     @media (min-width: 768px) {
@@ -46,11 +58,11 @@
 .header__sentence {
     position: relative;
     align-self: center;
-    margin: 5rem 3rem 0 3rem;
+    margin: 3rem 1rem 0 1rem;
     max-width: 50rem;
     p {
         margin: 2rem 0 2rem 0;
-        font-size: clamp(2rem, 5vw, 5rem);
+        font-size: clamp(2.5rem, 5vw, 5rem);
         font-weight: var(--font-medium);
     }
 
@@ -70,3 +82,5 @@
         cursor: pointer;
     }
 }
+
+
