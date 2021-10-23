@@ -1,16 +1,9 @@
 .header__fondo {
-    height: 0;
-    padding: 0;
-    padding-bottom: 160%;
     background-image: url("./assets/img-2.webp");
-    background-position: center;
-    background-size: 200%;
+    background-position:center center;
     background-repeat: no-repeat;
-    @media (min-width: 768px) {
-        background-position: center center;
-        background-size: 100%;
-        padding-bottom: 90%;
-    }
+    background-size: cover;
+    height: 1000px;
 }
 
 .header {
@@ -73,16 +66,7 @@
     }
 
     a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        font-size: 1.4rem;
-        font-weight: var(--font-bold);
-        border: solid 2px var(--color-bg);
-        background-color: transparent;
+        font-size: 2rem;
         cursor: pointer;
     }
 }

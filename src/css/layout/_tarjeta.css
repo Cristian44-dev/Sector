@@ -2,11 +2,11 @@
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap-reverse;
     gap: 8rem 10%;
     margin-bottom: 12rem;
+
 
     &:hover .tarjeta__content {
         & > span {
@@ -17,12 +17,18 @@
             width: 20rem;
         }
     }
+
+    @media(min-width:480px){
+        flex-direction:row;
+        .tarjeta__content, .tarjeta__img{
+            width:45%;
+        }
+    }
 }
 
 .tarjeta__content {
     position: relative;
-    width: 45%;
-    flex-grow: 1;
+    width:100%;
 
     & > span {
         position: absolute;
@@ -53,34 +59,38 @@
 
     p {
         font-size: 1.4rem;
-        line-height: 1.7rem;
+        line-height:2rem;
         color: white;
     }
 
     a {
+        display: inline-block;
         font-size: 1.4rem;
         font-weight: var(--font-medium);
         color: var(--color-accent);
+        transition: all 0.3s ease;
 
-        span {
-            display: inline-block;
+        i { 
+            font-size: 1.2rem;
             transition: all 0.3s ease;
         }
 
-        span:not(:hover) {
+        &:not(:hover) {
             transform: rotate(0deg);
         }
 
-        &:hover span {
+        &:hover i  {
             transform: rotate(90deg);
+        }
+        
+        &:hover{
+            transform: scale(1.05);
         }
     }
 }
 
 .tarjeta__img {
-    width: 45%;
-    min-width: 27rem;
-    flex-grow: 1;
+    width:100%;
     img {
         width: 100%;
     }
@@ -94,3 +104,4 @@ main section {
     position: relative;
     top: -10rem;
 }
+

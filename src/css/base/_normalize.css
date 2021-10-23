@@ -354,7 +354,6 @@ html {
     box-sizing: border-box;
     font-size: 62.3%; /* 1rem = 10px */
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
 }
 
 *,
@@ -366,6 +365,7 @@ html {
 body {
     font-family: var(--main-font);
     color: var(--color-bg);
+    min-width: 36rem;
 }
 
 a {

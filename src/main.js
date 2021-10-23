@@ -1,7 +1,7 @@
 const d = document;
 const options = {
     rootMargin: "0px",
-    threshold: 0.7,
+    threshold: .8,
 };
 let des = 0;
 const $navegacion = d.querySelectorAll("[data-section]");
