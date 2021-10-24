@@ -78,8 +78,25 @@
     }
 
     a {
+        position: relative;
         font-size: 2rem;
         cursor: pointer;
+        animation-name:link; 
+        animation-duration:1s;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+    }
+
+    @keyframes link{    
+        0%{
+            top:0rem;
+        }
+        50%{
+            top:0.5rem;
+        }
+        100%{
+            top:1rem;
+        }
     }
 }
 
